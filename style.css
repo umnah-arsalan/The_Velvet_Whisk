@@ -1,7 +1,7 @@
 html {
   height: 100%;
   scroll-behavior: smooth;
-  background-image: url('images/download-1.jpg');
+  background-image: url('images/download.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  background-color: #0000006e;
+  background-color: #27272798;
 }
 
 header {
