@@ -1,0 +1,52 @@
+.partial-cover {
+    height: 45vh;
+    width: 100%;
+    background-image: url(images/Freshly\ Baked\ Artisan\ Pastry\ Basket\ 🥐✨.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.black-background {
+    background-color: rgba(0, 0, 0, 0.267);
+    margin-top: -47px;
+    padding-bottom: 37px;
+}
+
+h1 {
+    font-family: 'Lobster', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    padding-top: 47px;
+}
+
+main {
+    background-color: white;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 200px;
+}
+
+.starting {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cardbox {
+    width: 40%;
+    padding-bottom: 30px;
+}
+
+.cardbox .subheadings, .text {
+    text-align: center;
+}
