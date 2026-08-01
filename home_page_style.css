@@ -16,19 +16,18 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh; /* ensure the cover fills the viewport */
   width: 100%;
-  background-color: #27272798;
+  box-sizing: border-box;
+  padding-top: 60px; /* account for fixed header height */
+  background-color: rgba(39, 39, 39, 0.6); /* semi-transparent overlay */
+  overflow: hidden;
 }
 
 header {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 15px;
-  top: 20px;
-  left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
-  gap: 12px;
   align-items: center;
   background-color: #00000085;
 }
@@ -43,27 +42,11 @@ header{
     transition: background-color 0.4s ease;
 }
 
-
-/* The following code is for the navigation bar */
-nav{
-    margin-left:auto;
-}
-
-nav{
-    margin-left:auto;
-    margin-right:20px;
-}
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-size:17px;
-    font-weight:500;
-    margin-right:25px;
-}
-
-nav a:hover{
-    color:#FFD700;
+.flex-header {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* space between logo and brand name */
 }
 
 .logo {
@@ -74,8 +57,36 @@ nav a:hover{
 .brand-name {
   color: #fff;
   font-size: 18px;
-  font-family: 'Arial', sans-serif;
-  letter-spacing: 0.05em;
+  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+  margin: 0; /* remove default paragraph margins so it aligns with the logo */
+}
+
+.brand-name:hover {
+    color: #e27373;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/* The following code is for the navigation bar */
+
+nav {
+    margin-left:auto;
+    margin-right:20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    margin-right: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav a:hover {
+    color: #e27373;
 }
 
 .hero-title {
@@ -94,7 +105,7 @@ nav a:hover{
 
 .arrow {
   display: block;
-  margin: auto auto 20px;
+  margin: auto auto;
   width: min(16vw, 40px);
   max-width: 40px;
   height: auto;
