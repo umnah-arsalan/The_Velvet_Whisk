@@ -25,15 +25,17 @@ body {
 }
 
 header {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
   display: flex;
   align-items: center;
   background-color: #00000085;
 }
 
 /* The following code is to make the header fixed at the top the navigation stays at the top while the user scrolls. */
-header{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,10 +45,9 @@ header{
 }
 
 .flex-header {
-    padding-left: 20px;
     display: flex;
     align-items: center;
-    gap: 12px; /* space between logo and brand name */
+    gap: 12px;
 }
 
 .logo {
@@ -57,8 +58,7 @@ header{
 .brand-name {
   color: #fff;
   font-size: 18px;
-  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
-  margin: 0; /* remove default paragraph margins so it aligns with the logo */
+  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif; /* remove default paragraph margins so it aligns with the logo */
 }
 
 .brand-name:hover {
@@ -72,8 +72,8 @@ header a {
 /* The following code is for the navigation bar */
 
 nav {
-    margin-left:auto;
-    margin-right:20px;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 nav a{
@@ -95,7 +95,7 @@ nav a:hover {
   color: #fff;
   font-family:'Lobster', sans-serif;
   font-weight: bold;
-  font-size: clamp(4rem, 8vw, 6rem);
+  font-size: 6rem;
   line-height: 1;
   font-style: italic;
   align-items: center;
