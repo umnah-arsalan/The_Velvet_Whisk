@@ -1,3 +1,7 @@
+header{
+    position: relative;
+}
+
 .partial-cover {
     height: 45vh;
     width: 100%;

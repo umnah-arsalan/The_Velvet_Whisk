@@ -33,6 +33,39 @@ header {
   background-color: #00000085;
 }
 
+/* The following code is to make the header fixed at the top the navigation stays at the top while the user scrolls. */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.4s ease;
+}
+
+
+/* The following code is for the navigation bar */
+nav{
+    margin-left:auto;
+}
+
+nav{
+    margin-left:auto;
+    margin-right:20px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:17px;
+    font-weight:500;
+    margin-right:25px;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+
 .logo {
   width: 40px;
   height: auto;
