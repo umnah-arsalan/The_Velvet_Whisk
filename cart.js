@@ -1,6 +1,6 @@
-// ================================
+
 // CART OPEN / CLOSE
-// ================================
+
 
 const cartButton = document.querySelector(".floating-cart");
 const cartPanel = document.querySelector(".cart-panel");
@@ -17,9 +17,9 @@ if (closeButton) {
 }
 
 
-// ================================
+
 // SHOPPING CART
-// ================================
+
 
 const buttons = document.querySelectorAll(".add-to-cart");
 const cartItems = document.getElementById("cart-items");
@@ -29,9 +29,9 @@ const totalElement = document.getElementById("cart-total");
 let cart = [];
 
 
-// ================================
+
 // ADD PRODUCT
-// ================================
+
 
 buttons.forEach(button => {
 
@@ -67,9 +67,9 @@ buttons.forEach(button => {
 });
 
 
-// ================================
+
 // UPDATE CART
-// ================================
+
 
 function updateCart() {
 
