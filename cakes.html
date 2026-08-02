@@ -41,37 +41,113 @@
                 <img src="images/🍰Triple Chocolate Mousse Cake 🍰.jpg" alt="Noir Intense Chocolate Cake" class="image">
                 <h2 class="subheadings">Noir Intense Chocolate</h2>
                 <p class="text">A deep, rich chocolate indulgence crafted with premium cocoa and silky ganache layers. Designed for a bold and luxurious experience.</p>
+                <div class="product-action">
+                  <span class="price">$650</span>
+                  <button
+                        class="cart-btn add-to-cart"
+                        data-name="Noir Intense Chocolate Cake"
+                        data-price="650">
+                        Add to Cart
+                    </button>
+                </div>
             </div>
             <div class="cardbox">
                 <img src="images/velvet cake.jpg" alt="Velvet Rouge Elegance Cake" class="image">
                 <h2 class="subheadings">Velvet Rouge Elegance</h2>
                 <p class="text">A classic red velvet cake refined with smooth cream cheese frosting and a delicate finish. Soft, elegant, and timelessly luxurious.</p>
+                <div class="product-action">
+                  <span class="price">$550</span>
+                  <button
+                        class="cart-btn add-to-cart"
+                        data-name="Velvet Rouge Elegance Cake"
+                        data-price="550">
+                        Add to Cart
+                    </button>
+                </div>
             </div>
             <div class="cardbox">
                 <img src="images/download (1).jpg" alt="Royal Strawberry Mousse Cake" class="image">
                 <h2 class="subheadings">Royal Strawberry Mousse</h2>
                 <p class="text">Light sponge layered with fresh strawberry mousse and a refined creamy texture. A refreshing luxury dessert with a delicate finish.</p>
+                <div class="product-action">
+                  <span class="price">$450</span>
+                    <button
+                            class="cart-btn add-to-cart"
+                            data-name="Royal Strawberry Mousse Cake"
+                            data-price="450">
+                            Add to Cart
+                    </button>
+                </div>
             </div>
             <div class="cardbox">
                 <img src="images/Unlock the Art of Cake Decorating_ Stunning Vanilla Cake Ideas for Weddings  Special Occ.jpg" alt="Golden Vanilla Luxe Cake" class="image">
                 <h2 class="subheadings">Golden Vanilla Luxe</h2>
                 <p class="text">Soft vanilla sponge with a smooth golden caramel glaze and luxury-style frosting. Simple, elegant, and classically premium.</p>
+                <div class="product-action">
+                  <span class="price">$350</span>
+                    <button
+                            class="cart-btn add-to-cart"
+                            data-name="Golden Vanilla Luxe Cake"
+                            data-price="350">
+                            Add to Cart
+                    </button>
+                </div>
             </div>
             <div class="cardbox">
                 <img src="images/No-bake Dubai Chocolate Cheesecake Recipe _ Luxe Dessert Digital Download - Etsy UK.jpg" alt="Dubai Chocolate Cake" class="image">
                 <h2 class="subheadings">Dubai Chocolate</h2>
                 <p class="text">A rich luxury chocolate cake with deep cocoa layers and silky ganache for a bold, premium experience.</p>
+                <div class="product-action">
+                  <span class="price">$600</span>
+                    <button
+                            class="cart-btn add-to-cart"
+                            data-name="Dubai Chocolate Cake"
+                            data-price="600">
+                            Add to Cart
+                    </button>
+                
+                </div>
             </div>
             <div class="cardbox">
                 <img src="images/bluberry cake.jpg" alt="Bluberry Elegance Cake" class="image">
                 <h2 class="subheadings">Blueberry Elegance</h2>
                 <p class="text">Soft vanilla sponge layered with fresh blueberry cream for a light, fresh, and luxurious taste.</p>
+                <div class="product-action">
+                  <span class="price">$400</span>
+                    <button
+                            class="cart-btn add-to-cart"
+                            data-name="Blueberry Elegance Cake"
+                            data-price="400">
+                            Add to Cart
+                    </button>
+                </div>
             </div>
         </div>
     </main>
+
+    <div class="floating-cart">
+        <img src="images/ChatGPT Image Aug 1, 2026, 09_05_37 PM.png" alt="Shopping Cart">
+    </div>
+    <div class="cart-panel">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <h3>Total: $<span id="cart-total">0</span></h3>
+            <button class="checkout-btn">
+                Checkout
+            </button>
+        </div>
+    </div>
+
     <footer>
         <img src="images/Brown Cream Minimalist Aesthetic Bakery Shop Logo.png" alt="The Velvet Whisk Logo" class="logo">
         <p class="text">&copy; 2023 The Velvet Whisk Bakery. All rights reserved.</p>
     </footer>
+<script src="cart.js"></script>    
 </body>
 </html>
