@@ -394,3 +394,137 @@ footer .text {
     visibility: visible;
 
 }
+
+/* 
+   Cart Product*/
+
+.cart-product{
+
+    padding:15px 0;
+
+}
+
+.cart-product strong{
+
+    font-size:18px;
+
+    color:#4B2E2E;
+
+}
+
+
+/* 
+   Quantity Controls
+*/
+
+.quantity-controls{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:12px 0;
+
+}
+
+.quantity-controls span{
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+
+/*
+   Plus & Minus Buttons
+*/
+
+.plus-btn,
+.minus-btn{
+
+    width:35px;
+
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#A0522D;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.plus-btn:hover,
+.minus-btn:hover{
+
+    background:#8B0000;
+
+    transform:scale(1.08);
+
+}
+
+
+/* Remove Button*/
+
+.remove-btn{
+
+    margin-top:10px;
+
+    padding:8px 15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:hsl(0, 22%, 39%);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.remove-btn:hover{
+
+    background:#b52b27;
+
+}
+
+
+/*
+   Cart Price
+*/
+
+.cart-product p{
+
+    margin:10px 0;
+
+    font-size:15px;
+
+}
+
+
+/* 
+   Divider*/
+
+.cart-product hr{
+
+    margin-top:18px;
+
+    border:none;
+
+    border-top:1px solid #ddd;
+
+}

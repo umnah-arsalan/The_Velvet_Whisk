@@ -1,6 +1,5 @@
-// ======================================
 // CART OPEN / CLOSE
-// ======================================
+
 
 const cartButton = document.querySelector(".floating-cart");
 const cartPanel = document.querySelector(".cart-panel");
@@ -21,7 +20,7 @@ cartButton.addEventListener("click", function () {
 
 });
 
-// Close Cart Function
+// Close Cart
 function closeCart() {
 
     cartPanel.style.right = "-380px";
@@ -35,14 +34,14 @@ function closeCart() {
 
 }
 
-// Close button
+// Close with X button
 if (closeButton) {
 
     closeButton.addEventListener("click", closeCart);
 
 }
 
-// Close when clicking outside the cart
+// Close by clicking overlay
 if (overlay) {
 
     overlay.addEventListener("click", closeCart);
@@ -51,23 +50,21 @@ if (overlay) {
 
 
 
-// ======================================
+
 // SHOPPING CART
-// ======================================
+
 
 const buttons = document.querySelectorAll(".add-to-cart");
 const cartItems = document.getElementById("cart-items");
 const totalElement = document.getElementById("cart-total");
 
-// Store all products
+// Store products
 let cart = [];
 
 
 
-// ======================================
-// ADD PRODUCTS
-// ======================================
 
+// ADD PRODUCTS
 buttons.forEach(button => {
 
     button.addEventListener("click", function () {
@@ -94,7 +91,7 @@ buttons.forEach(button => {
 
         updateCart();
 
-        // Cart stays closed until the user clicks the cart icon
+        // Cart stays closed until user clicks cart icon
 
     });
 
@@ -102,9 +99,9 @@ buttons.forEach(button => {
 
 
 
-// ======================================
+
 // UPDATE CART
-// ======================================
+
 
 function updateCart() {
 
@@ -125,14 +122,76 @@ function updateCart() {
             product.classList.add("cart-product");
 
             product.innerHTML = `
-                <strong>${item.name}</strong><br>
-                Quantity: ${item.quantity}<br>
-                $${item.price} × ${item.quantity} =
-                <strong>$${item.price * item.quantity}</strong>
+                <strong>${item.name}</strong>
+
+                <div class="quantity-controls">
+
+                    <span>Quantity</span>
+
+                    <button class="minus-btn">−</button>
+
+                    <span>${item.quantity}</span>
+
+                    <button class="plus-btn">+</button>
+
+                </div>
+
+                <p>
+                    $${item.price} × ${item.quantity}
+                    =
+                    <strong>$${item.price * item.quantity}</strong>
+                </p>
+
+                <button class="remove-btn">
+                    🗑 Remove
+                </button>
+
                 <hr>
             `;
 
             cartItems.appendChild(product);
+
+            
+            // PLUS BUTTON
+            
+
+            product.querySelector(".plus-btn").addEventListener("click", function () {
+
+                item.quantity++;
+
+                updateCart();
+
+            });
+
+            
+            // MINUS BUTTON
+            
+
+            product.querySelector(".minus-btn").addEventListener("click", function () {
+
+                item.quantity--;
+
+                if (item.quantity <= 0) {
+
+                    cart = cart.filter(p => p.name !== item.name);
+
+                }
+
+                updateCart();
+
+            });
+
+            
+            // REMOVE BUTTON
+            
+
+            product.querySelector(".remove-btn").addEventListener("click", function () {
+
+                cart = cart.filter(p => p.name !== item.name);
+
+                updateCart();
+
+            });
 
             total += item.price * item.quantity;
 
