@@ -1,37 +1,72 @@
-
+// ======================================
 // CART OPEN / CLOSE
-
+// ======================================
 
 const cartButton = document.querySelector(".floating-cart");
 const cartPanel = document.querySelector(".cart-panel");
 const closeButton = document.querySelector(".close-cart");
+const overlay = document.querySelector(".overlay");
 
+// Open Cart
 cartButton.addEventListener("click", function () {
+
     cartPanel.style.right = "0";
+
+    if (overlay) {
+        overlay.classList.add("show-overlay");
+    }
+
+    // Disable page scrolling
+    document.body.style.overflow = "hidden";
+
 });
 
+// Close Cart Function
+function closeCart() {
+
+    cartPanel.style.right = "-380px";
+
+    if (overlay) {
+        overlay.classList.remove("show-overlay");
+    }
+
+    // Enable page scrolling
+    document.body.style.overflow = "auto";
+
+}
+
+// Close button
 if (closeButton) {
-    closeButton.addEventListener("click", function () {
-        cartPanel.style.right = "-380px";
-    });
+
+    closeButton.addEventListener("click", closeCart);
+
+}
+
+// Close when clicking outside the cart
+if (overlay) {
+
+    overlay.addEventListener("click", closeCart);
+
 }
 
 
 
+// ======================================
 // SHOPPING CART
-
+// ======================================
 
 const buttons = document.querySelectorAll(".add-to-cart");
 const cartItems = document.getElementById("cart-items");
 const totalElement = document.getElementById("cart-total");
 
-// Store all products here
+// Store all products
 let cart = [];
 
 
 
-// ADD PRODUCT
-
+// ======================================
+// ADD PRODUCTS
+// ======================================
 
 buttons.forEach(button => {
 
@@ -40,7 +75,7 @@ buttons.forEach(button => {
         const name = button.dataset.name;
         const price = Number(button.dataset.price);
 
-        // Check whether the product already exists
+        // Check if product already exists
         const existingItem = cart.find(item => item.name === name);
 
         if (existingItem) {
@@ -59,8 +94,7 @@ buttons.forEach(button => {
 
         updateCart();
 
-        // Automatically open cart after adding
-        cartPanel.style.right = "0";
+        // Cart stays closed until the user clicks the cart icon
 
     });
 
@@ -68,8 +102,9 @@ buttons.forEach(button => {
 
 
 
+// ======================================
 // UPDATE CART
-
+// ======================================
 
 function updateCart() {
 
@@ -85,12 +120,15 @@ function updateCart() {
 
         cart.forEach(item => {
 
-            const product = document.createElement("p");
+            const product = document.createElement("div");
+
+            product.classList.add("cart-product");
 
             product.innerHTML = `
                 <strong>${item.name}</strong><br>
                 Quantity: ${item.quantity}<br>
-                $${item.price} × ${item.quantity} = <strong>$${item.price * item.quantity}</strong>
+                $${item.price} × ${item.quantity} =
+                <strong>$${item.price * item.quantity}</strong>
                 <hr>
             `;
 

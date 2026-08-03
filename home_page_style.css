@@ -367,3 +367,30 @@ footer .text {
     cursor:pointer;
 }
 
+/** Used for Dark background behind the cart ***/
+.overlay{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+    z-index: 999;
+}
+
+.show-overlay{
+
+    opacity: 1;
+    visibility: visible;
+
+}
